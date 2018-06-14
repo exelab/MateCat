@@ -338,9 +338,6 @@ class SegmentsFilter extends React.Component {
                                 </div>
                             </div>
                             <div className={"filter-data-sample " + dataSampleClassEnabled}>
-                                <div className="percent-item">
-                                    15%
-                                </div>
                                 <div className="ui top left pointing dropdown basic tiny button" ref={(checkbox)=>this.dataSampleDropDown=checkbox}>
                                     <div className="text">Data Sample</div>
                                     <div className="ui cancel label"><i className="icon-cancel3" onClick={this.resetDataSampleFilter.bind(this)}/></div>
@@ -373,6 +370,11 @@ class SegmentsFilter extends React.Component {
                                         </div>
                                     </div>
                                 </div>
+                                {this.state.dataSampleEnabled && this.state.samplingType !== "" ? (
+                                    <div className="percent-item">
+                                        {this.state.samplingSize}%
+                                    </div>
+                                ) : (null)}
                             </div>
                         </div>
 
