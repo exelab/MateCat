@@ -38,7 +38,6 @@ class QAComponent extends React.Component {
             } else if ($('#segment-' + segmentId + '-1').length) {
                 window.location.hash = segmentId + '-1';
             }
-            UI.scrollSegment($segment, segmentId);
             if ($segment.hasClass('ice-locked')) {
                 UI.editAreaClick($(UI.targetContainerSelector(), $segment), 'moving');
             }
@@ -114,7 +113,7 @@ class QAComponent extends React.Component {
                             <i className="icon-cancel-circle icon"></i>
                             {this.state.labels[key] ?
                                 this.state.labels[key] : key}
-                            <b>({this.props.warnings.ERROR.Categories[key].length})</b>
+                            <b> ({this.props.warnings.ERROR.Categories[key].length})</b>
                         </button>)
                     }
                 })
@@ -151,7 +150,7 @@ class QAComponent extends React.Component {
                         info.push(<button key={index} className={"ui button qa-issue" + activeClass}
                                           onClick={this.setCurrentNavigationElements.bind(this, this.props.warnings.INFO.Categories[key], 'INFO', key)}>
                             {this.state.labels[key] ?
-                                this.state.labels[key] : key} <b>({this.props.warnings.INFO.Categories[key].length})</b>
+                                this.state.labels[key] : key} <b> ({this.props.warnings.INFO.Categories[key].length})</b>
                         </button>)
                     }
                 })
