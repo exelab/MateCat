@@ -1878,17 +1878,6 @@ body .footer.showMatches .sub-editor.open {
     float: left;
 }
 
-.search-display {
-    float: left;
-    display: none;
-    width: 92%;
-    background: #a5a5a5;
-    color: #fff;
-    text-align: left;
-    padding: 5px 4%;
-    font-style: italic;
-    border-top: 1px solid #666;
-}
 
 body.searchActive .search-display {
     display: block;
@@ -1899,20 +1888,13 @@ body.searchActive .search-display {
     font-size: 13px;
 }
 
-.search-display p.found {
-    display: none;
-}
-
-.search-display.displaying p.found {
+.search-display p.found,
+.search-display .search-result-buttons {
     display: block;
 }
 
 .search-display p.searching {
     display: block;
-}
-
-.search-display.displaying p.searching {
-    display: none;
 }
 
 .search-display span.param {
